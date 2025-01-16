@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Card Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-500 to-purple-700 text-white">
+  <h1 class="text-3xl font-bold mb-8">Pokémon Card Generator</h1>
+
+  <div id="card-container" class="w-96 p-6 bg-white shadow-lg rounded-lg text-gray-800">
+    <!-- Pokemon card -->
+    <div id="pokemon-card" class="hidden">
+      <!-- Header Section -->
+      <div class="flex justify-between items-center mb-4">
+        <h2 id="pokemon-name" class="text-2xl font-bold text-purple-600">Gible</h2>
+        <span id="pokemon-id" class="text-gray-400">#000</span>
+      </div>
+      <img id="pokemon-image" src="" alt="Pokemon" class="w-40 h-40 mx-auto mb-4">
+
+      <!-- Type Badges -->
+      <div id="pokemon-types" class="flex justify-center space-x-2 mb-4">
+        <!-- Types will be dynamically inserted here -->
+      </div>
+
+      <!-- About Section -->
+      <h3 class="text-lg font-bold text-purple-600">About</h3>
+      <div class="grid grid-cols-2 text-center my-4">
+        <div>
+          <p class="text-sm text-gray-500">Weight</p>
+          <p id="pokemon-weight" class="font-bold">0</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Height</p>
+          <p id="pokemon-height" class="font-bold">0</p>
+        </div>
+      </div>
+      <p class="text-sm text-gray-700 mb-4"><strong>Abilities:</strong> <span id="pokemon-abilities">None</span></p>
+
+      <!-- Base Stats Section -->
+      <h3 class="text-lg font-bold text-purple-600">Base Stats</h3>
+      <div id="pokemon-stats" class="mt-2 space-y-2">
+        <!-- Stats will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- Button to generate card -->
+    <button id="generate-btn" class="mt-6 px-4 py-2 bg-purple-600 text-white font-bold rounded hover:bg-purple-700">Generate Random Card</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
