@@ -37,12 +37,13 @@ function displayPokemonData(data) {
   data.stats.forEach(statInfo => {
     const statName = statInfo.stat.name.toUpperCase();
     const baseStat = statInfo.base_stat;
+    const baseStatPersent = statInfo.base_stat<=100 ? statInfo.base_stat:100;
     const statElement = document.createElement("div");
     statElement.className = "flex items-center space-x-2";
     statElement.innerHTML = `
       <span class="w-16 text-sm font-bold">${statName}</span>
       <div class="flex-1 bg-gray-300">
-        <div class="stat-bar bg-purple-600" style="width: ${baseStat}%"></div>
+        <div class="stat-bar bg-purple-600" style="width: ${baseStatPersent}%"></div>
       </div>
       <span class="text-sm font-semibold">${baseStat}</span>
     `;
